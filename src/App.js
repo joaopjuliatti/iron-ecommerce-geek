@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import './App.css';
 import ApiService from './api/service';
-import { Home, SecondPage } from './pages';
+import { SignIn, SecondPage } from './pages';
 
 class App extends Component {
   constructor() {
@@ -42,6 +42,14 @@ class App extends Component {
     });
   };
 
+  signInMethod = ()=>{
+    console.log("LOGOU")
+  }
+  
+  signUpMethod = ()=>{
+    console.log("Criar conta")
+  }
+
   filterProducts = searchValue => {
     const filteredProducts = this.state.products.filter(product => (
       product.productName.toLowerCase().includes(searchValue.toLowerCase())
@@ -57,7 +65,8 @@ class App extends Component {
         <Route
           exact
           path="/"
-          render={props => <Home {...props} products={this.state.displayedProducts} addToChart={this.addToChart} filterMethod={this.filterProducts} />}
+          // render={props => <Home {...props} products={this.state.displayedProducts} addToChart={this.addToChart} filterMethod={this.filterProducts} />}
+          render={props => <SignIn {...props} signUpMethod={this.signUpMethod} signInMethod={this.signInMethod}/>}
         />
         <Route
           exact

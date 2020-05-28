@@ -1,0 +1,16 @@
+.signInForm {
+    width: 500px;
+    background-color: #FFFFFF;
+    margin:-6.875rem auto 0;
+    min-height: 400px;
+    padding:2rem 4rem;
+    display: flex;
+    flex-direction: column  ;
+    border-radius: 15px;
+    justify-content: space-evenly;
+}
+.yellowDiv {
+    top:0;
+    height: 11.375rem;
+    background-color:#FFF059 ;
+}
